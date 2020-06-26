@@ -6,16 +6,16 @@ import Foundation
 
 class Programmer {
     
-    let name: String
-    let age: Int
-    let languages: [Language]
+    private let name: String
+    private let age: Int
+    private let languages: [Language]
     var friends: [Programmer]?
     
-    enum Language {
-        case swift
-        case kotlin
-        case java
-        case javascript
+    enum Language : String{
+        case swift = "Swift"
+        case kotlin = "Kotlin"
+        case java = "Java"
+        case javascript = "Javascript"
     }
     
     init(name: String, age: Int, languages: [Language]) {
@@ -25,21 +25,52 @@ class Programmer {
     }
     
     func code() {
-        print("Estoy programando \(languages)")
+        print ("Estoy programando:")
+        for language in languages
+        {
+            print("\(language.self.rawValue)")
+        }
+       
     }
+    
+    func sayHello() {
+        print ("Hello I'm \(self.name)  with \(self.age) old.")
+    }
+    
+    func printFriends(){
+        print ("My Friends are:")
+        
+        if let myFriends = self.friends{
+            for friend in myFriends {
+                print("\(friend.getName())")
+            }
+        }
+        
+    }
+    
+    func getName() -> String {
+        return self.name
+    }
+    
+    
     
 }
 
 // Instancia de una clase
 
 let brais = Programmer(name: "Brais Moure", age: 32, languages: [.swift, .kotlin])
-
-brais.code()
-
 let sara = Programmer(name: "Sara", age: 40, languages: [.java])
 
-sara.code()
-
 brais.friends = [sara]
-print(brais.friends?.first?.name)
-print(sara.friends)
+brais.sayHello()
+brais.code()
+brais.printFriends()
+
+print("\n")
+sara.sayHello()
+sara.code()
+sara.printFriends()
+
+
+
+

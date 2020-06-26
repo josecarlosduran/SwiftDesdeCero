@@ -11,5 +11,16 @@
         <page name='08 - Opcionales'/>
         <page name='09 - Funciones'/>
         <page name='10 - Clases'/>
+        <page name='11 - Optionals'/>
+        <page name='12 - Optional Binding'/>
+        <page name='13 - Optional chaining'/>
+        <page name='14 - Guard Let'/>
+        <page name='15 - Error Handling'/>
+        <page name='16 - Type Casting'/>
+        <page name='17 - Nested Types'/>
+        <page name='18 - Extensions'/>
+        <page name='19 - Protocols'/>
+        <page name='20 - Generics'/>
+        <page name='21 - Advanced Operators'/>
     </pages>
 </playground>
